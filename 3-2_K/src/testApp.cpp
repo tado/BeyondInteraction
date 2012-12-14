@@ -16,7 +16,7 @@ void testApp::setup(){
 
 void testApp::update(){
     //ムービーをカメラからキャプチャする
-    vidGrabber.grabFrame();
+    vidGrabber.update();
 }
 
 void testApp::draw(){

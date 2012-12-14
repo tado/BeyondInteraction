@@ -1,5 +1,4 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 
@@ -28,5 +27,3 @@ public:
     float lAudio[256]; //左チャンネル波形
     float rAudio[256]; //右チャンネル波形
 };
-
-#endif

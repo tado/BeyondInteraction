@@ -1,5 +1,4 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 
@@ -21,5 +20,3 @@ public:
     ofImage myImage; //画像ファイルより読みこまれたイメージデータ
     ofImage grabbedImage; //画面をキャプチャーしたイメージデータ
 };
-
-#endif

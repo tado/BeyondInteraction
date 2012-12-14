@@ -6,8 +6,7 @@ void testApp::setup(){
     ofBackground(0,0,0);
     ofEnableSmoothing();
     //画面の混色の設定を加算合成にする
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+    ofEnableBlendMode(OF_BLENDMODE_ADD);
     //ムービーデータを読込む
     fingersMovie.loadMovie("fingers.mov");
     //ムービーの再生開始
@@ -16,7 +15,7 @@ void testApp::setup(){
 
 void testApp::update(){
     //ムービー再生を待機状態に
-    fingersMovie.idleMovie();
+    fingersMovie.update();
 }
 
 void testApp::draw(){

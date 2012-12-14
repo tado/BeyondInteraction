@@ -1,5 +1,4 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 
@@ -24,5 +23,3 @@ public:
     float phase; //位相
     float frequency; //周波数
 };
-
-#endif

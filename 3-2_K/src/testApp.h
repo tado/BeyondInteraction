@@ -1,5 +1,4 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 
@@ -23,5 +22,3 @@ public:
     int camWidth; //カメラから取り込む画像の幅
     int camHeight; //カメラから取り込む画像の高さ
 };
-
-#endif

@@ -5,8 +5,7 @@ void testApp::setup(){
     ofBackground(0,0,0);
     ofEnableSmoothing();
     //画面の混色の設定を加算合成にする
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+    ofEnableBlendMode(OF_BLENDMODE_ADD);
     //画像データの読込み
     myImage.loadImage("MonaLisa.jpg");
 }

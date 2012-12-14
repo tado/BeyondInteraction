@@ -1,5 +1,4 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 
@@ -20,4 +19,3 @@ public:
     
     ofSoundPlayer mySound; //ofSoundクラスをインスタンス化
 };
-#endif
