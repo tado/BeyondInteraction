@@ -1,5 +1,4 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 #include "ofBlob.h"
@@ -22,5 +21,3 @@ public:
     //ofBlobのインスタンスを格納するvector(動的配列)blobs
     vector <ofBlob> blobs;
 };
-
-#endif

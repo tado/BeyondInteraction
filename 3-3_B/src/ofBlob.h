@@ -1,5 +1,4 @@
-#ifndef _OF_BLOB
-#define _OF_BLOB
+#pragma once
 
 #include "ofMain.h"
 
@@ -12,5 +11,3 @@ public:
     ofBlob(); //コンストラクタ
     void draw(); //円を描く
 };
-
-#endif

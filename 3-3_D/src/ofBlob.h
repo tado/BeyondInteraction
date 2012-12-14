@@ -1,5 +1,4 @@
-#ifndef _OF_BLOB
-#define _OF_BLOB
+#pragma once
 
 #include "ofMain.h"
 
@@ -20,5 +19,3 @@ public:
     void setSpeed(ofPoint speed); //speedセッター
     ofPoint getSpeed(); //speedゲッター
 };
-
-#endif

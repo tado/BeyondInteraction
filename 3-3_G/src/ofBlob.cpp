@@ -1,8 +1,7 @@
 #include "ofBlob.h"
 
 //コンストラクタ：位置と半径を指定
-ofBlob::ofBlob()
-{
+ofBlob::ofBlob(){
     pos = ofPoint(ofGetWidth()/2, ofGetHeight()/2); //位置の初期値
     dim = 100.0; //半径の初期値
     speed = ofPoint(0, 0); //移動スピードの初期値
@@ -11,8 +10,7 @@ ofBlob::ofBlob()
 }
 
 //メソッド：円を描く
-void ofBlob::draw()
-{
+void ofBlob::draw(){
     //円1を描く - 外周
     ofSetColor(31, 63, 255, 100);
     ofCircle(pos.x, pos.y, movedDim); //伸縮運動した半径を適用する
@@ -23,8 +21,7 @@ void ofBlob::draw()
 }
 
 //円のアニメーションを定義
-void ofBlob::update()
-{
+void ofBlob::update(){
     //円の伸縮運動
     movedDim = dim + sin(phase)*dim/4;
     phase += phaseSpeed;
@@ -33,7 +30,7 @@ void ofBlob::update()
     }
     
     //座標を更新
-    pos += speed; 
+    pos += speed;
     //画面の端に来たら跳ね返る
     if(pos.x < dim || pos.x > ofGetWidth()-dim){
         speed.x *= -1;
@@ -44,37 +41,31 @@ void ofBlob::update()
 }
 
 //posセッター
-void ofBlob::setPos(ofPoint _pos)
-{
-    pos = _pos; 
+void ofBlob::setPos(ofPoint _pos){
+    pos = _pos;
 }
 
 //posゲッター
-ofPoint ofBlob::getPos()
-{
+ofPoint ofBlob::getPos(){
     return pos;
 }
 
 //dimセッター
-void ofBlob::setDim(float _dim)
-{
+void ofBlob::setDim(float _dim){
     dim = _dim;
 }
 
 //dimゲッター
-float ofBlob::getDim()
-{
+float ofBlob::getDim(){
     return dim;
 }
 
 //speedセッター
-void ofBlob::setSpeed(ofPoint _speed)
-{
+void ofBlob::setSpeed(ofPoint _speed){
     speed = _speed;
 }
 
 //speedゲッター
-ofPoint ofBlob::getSpeed()
-{
+ofPoint ofBlob::getSpeed(){
     return speed;
 }

@@ -1,15 +1,13 @@
 #include "ofBlob.h"
 
 //コンストラクタ：位置と半径を指定
-ofBlob::ofBlob()
-{
+ofBlob::ofBlob(){
     pos = ofPoint(400, 300); //位置の指定
     dim = 80.0; //半径の指定
 }
 
 //メソッド：円を描く
-void ofBlob::draw()
-{
+void ofBlob::draw(){
     //円1を描く - 外周
     ofSetColor(31, 63, 255, 100);
     ofCircle(pos.x, pos.y, dim);
@@ -20,25 +18,21 @@ void ofBlob::draw()
 }
 
 //posセッター
-void ofBlob::setPos(ofPoint _pos)
-{
+void ofBlob::setPos(ofPoint _pos){
     pos = _pos;
 }
 
 //posゲッター
-ofPoint ofBlob::getPos()
-{
+ofPoint ofBlob::getPos(){
     return pos;
 }
 
 //dimセッター
-void ofBlob::setDim(float _dim)
-{
+void ofBlob::setDim(float _dim){
     dim = _dim;
 }
 
 //dimゲッター
-float ofBlob::getDim()
-{
+float ofBlob::getDim(){
     return dim;
 }

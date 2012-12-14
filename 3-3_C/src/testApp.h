@@ -1,5 +1,4 @@
-#ifndef _TEST_APP //インクルードガード
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 #include "ofBlob.h" //Blob.hをインクルード
@@ -21,5 +20,3 @@ public:
     
     ofBlob blob; //ofBlobクラスをインスタンスblobを生成
 };
-
-#endif
