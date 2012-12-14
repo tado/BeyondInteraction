@@ -1,8 +1,6 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
-#include "ofxVectorMath.h" //ofxVectorMathのライブラリを読込み
 #include "ofxBox2d.h" //ofxBox2dのライブラリを読込み
 #include "CustomCircle.h" //CustomCircleで作成したクラスを使用
 
@@ -25,5 +23,3 @@ public:
     vector <CustomCircle> circles; //CustomCircleのインスタンスを格納するvector
     vector <ofxBox2dRect> rects; //障害物用の長方形ofxBox2dRectを格納するvector
 };
-
-#endif

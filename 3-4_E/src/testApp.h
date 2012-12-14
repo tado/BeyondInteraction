@@ -1,5 +1,4 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 #include "ofxOpenCv.h"
@@ -23,5 +22,3 @@ public:
     ofxCvColorImage colorImg; //OpenCVで扱うカラーイメージ
     ofxCvGrayscaleImage grayImage; //OpenCVで扱うグレースケールイメージ
 };
-
-#endif

@@ -1,4 +1,3 @@
-#include "ofxVectorMath.h"
 #include "ofxBox2d.h"
 
 //ofxBox2dCircleを継承したクラスCustomCircleを定義

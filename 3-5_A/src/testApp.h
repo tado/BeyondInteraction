@@ -1,9 +1,7 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 #include "ofxBox2d.h"
-#include "ofxVectorMath.h"
 #include "CustomCircle.h"
 #include "CustomJoint.h"
 
@@ -29,5 +27,3 @@ public:
     //物体同士を結ぶ「ばね」のクラスofxBox2dJointを拡張、ベクターjointsに格納
     vector <CustomJoint*> joints;
 };
-
-#endif

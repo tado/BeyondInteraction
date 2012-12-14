@@ -1,8 +1,6 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
-#include "ofxVectorMath.h" //ofxVectorMathのライブラリを読込み
 #include "ofxBox2d.h" //ofxBox2dのライブラリを読込み
 
 class testApp : public ofBaseApp {
@@ -23,5 +21,3 @@ public:
     ofxBox2d box2d; //Box2Dのインスタンス
     vector <ofxBox2dCircle> circles; //円を格納するvector
 };
-
-#endif

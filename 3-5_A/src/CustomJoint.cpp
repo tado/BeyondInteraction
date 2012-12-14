@@ -5,8 +5,8 @@ void CustomJoint::draw()
     if(!alive) return;
     
     //接続する2つの物体の位置を取得
-    b2Vec2 p1 = joint->GetAnchor1();
-    b2Vec2 p2 = joint->GetAnchor2();
+    b2Vec2 p1 = joint->GetAnchorA();
+    b2Vec2 p2 = joint->GetAnchorB();
     p1 *= OFX_BOX2D_SCALE;
     p2 *= OFX_BOX2D_SCALE;
     

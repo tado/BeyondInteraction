@@ -2,7 +2,6 @@
 #define _TEST_APP
 
 #include "ofMain.h"
-#include "ofxVectorMath.h" //ofxVectorMathのライブラリを読込み
 #include "ofxBox2d.h" //ofxBox2dのライブラリを読込み
 #include "CustomCircle.h" //CustomCircleで作成したクラスを使用
 

@@ -23,9 +23,6 @@ void testApp::draw(){
     for(int i=0; i<circles.size(); i++) {
         circles[i].draw();
     }
-    
-    //Box2Dで生成された図形を描画
-    box2d.draw();
 }
 
 void testApp::keyPressed(int key){

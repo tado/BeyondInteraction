@@ -27,9 +27,9 @@ void testApp::setup(){
     //物理パラメータを設定
     c->setPhysics(1.0, 0, 0);
     //ワールドに追加
-    c->setup(box2d.getWorld(), ofGetWidth()/2, ofGetHeight()/2, 10, true);
+    c->setup(box2d.getWorld(), ofGetWidth()/2, ofGetHeight()/2, 10);
     //衝突判定はしない
-    c->disableCollistion();
+    //c->disableCollistion();
     //ベクターcirclesに追加
     circles.push_back(c);
 }
@@ -83,7 +83,7 @@ void testApp::mousePressed(int x, int y, int button){
     //ワールドにパーティクル追加
     c->setup(box2d.getWorld(), ofGetWidth()/2+200, ofGetHeight()/2, 10);
     //衝突判定はしない
-    c->disableCollistion();
+    c->fixture.filter.groupIndex = -1;
     //ベクターcirclesに追加
     circles.push_back(c);
     //自分以外の全てのパーティクルと「ばね」で接続
@@ -91,9 +91,10 @@ void testApp::mousePressed(int x, int y, int button){
         //CustomJointクラスをインスタンス化
         CustomJoint *joint = new CustomJoint();
         //生成した｢ばね｣をワールドに追加
-        joint->setWorld(box2d.getWorld());
-        //2つの物体を接続
-        joint->addJoint(circles[i]->body, circles[circles.size()-1]->body, 0.2, -0.02);
+        joint->setup(box2d.getWorld(), circles[i]->body, circles[circles.size()-1]->body);
+        joint->setLength(40);
+        joint->setFrequency(0.1);
+        joint->setDamping(2.0);
         //ベクターjointsに追加
         joints.push_back(joint);
     }

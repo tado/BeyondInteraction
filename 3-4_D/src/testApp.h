@@ -1,5 +1,4 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 #include "ofxOpenCv.h"
@@ -22,5 +21,3 @@ public:
     ofVideoGrabber vidGrabber; //ビデオ入力
     ofxCvColorImage colorImg; //OpenCVで扱うカラーイメージ
 };
-
-#endif

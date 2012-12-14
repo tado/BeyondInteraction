@@ -17,13 +17,11 @@ void testApp::update(){
 }
 
 void testApp::draw(){
+    ofSetColor(0, 127, 255);
     //circlesに格納された全ての円を描画
     for(int i=0; i<circles.size(); i++) {
         circles[i].draw();
     }
-    
-    //Box2Dで生成された図形を描画
-    box2d.draw();
 }
 
 void testApp::keyPressed(int key){

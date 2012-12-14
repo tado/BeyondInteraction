@@ -1,7 +1,6 @@
 #include "CustomCircle.h"
 
-void CustomCircle::draw()
-{
+void CustomCircle::draw() {
     float radius = getRadius(); //半径を取得
     glPushMatrix(); //座標を変更
     glTranslatef(getPosition().x, getPosition().y, 0); //物体の位置に座標を移動

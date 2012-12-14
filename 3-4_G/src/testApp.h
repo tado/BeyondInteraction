@@ -1,5 +1,4 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 #include "ofxOpenCv.h"
@@ -29,5 +28,3 @@ public:
     bool bLearnBakground; //背景を記録したかどうか
     int threshold; //背景の差分の閾値
 };
-
-#endif

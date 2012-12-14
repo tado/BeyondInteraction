@@ -11,8 +11,6 @@ void testApp::setup(){
 void testApp::update(){
     //新規にフレームを取り込んだかを判定する変数
     bool bNewFrame = false;
-    //1フレーム映像を取り込み
-    vidGrabber.grabFrame();
     //最後に取り込んだフレームから変化があったかを判定
     bNewFrame = vidGrabber.isFrameNew();
     //新規のフレームの場合とりこみ実行

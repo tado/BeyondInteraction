@@ -10,7 +10,6 @@ void testApp::setup(){
     //Box2D初期設定
     box2d.init(); //Box2Dの世界を初期化
     box2d.setGravity(0,5); //重力を設定、下に5の力
-    box2d.createFloor();
     box2d.checkBounds(false);
     box2d.setFPS(30); //30fpsで表示
     
@@ -22,7 +21,7 @@ void testApp::setup(){
         float x = ofRandom(50, ofGetWidth()-50); //ランダムにx座標の位置を指定
         float y = ofRandom(50, ofGetHeight()-50); //ランダムにy座標の位置を指定
         r.setPhysics(1.0, 1.2, 0.5); //物理パラメータを設定、重さ1、反発力1.2、摩擦力:0.5
-        r.setup(box2d.getWorld(), x, y, w, h, true); //固定した状態で画面に追加
+        r.setup(box2d.getWorld(), ofRectangle(x, y, w, h)); //固定した状態で画面に追加
         rects.push_back(r); //rectsに生成した長方形を追加
     }
 }
@@ -58,7 +57,7 @@ void testApp::keyPressed(int key){
     // 「r」をタイプすると、全ての円を消去
     if (key == 'r') {
         for(int i=0; i<circles.size(); i++) {
-            circles[i].destroyShape();
+            circles[i].destroy();
         }
         circles.clear();
     }
