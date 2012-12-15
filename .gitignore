@@ -34,6 +34,7 @@ Release*/
 *.mode1v3
 *.mode2v3
 #XCode 4
+DerivedData
 xcuserdata
 *.xcworkspace
 
