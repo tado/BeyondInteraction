@@ -50,7 +50,9 @@ void testApp::update(){
 
 void testApp::draw(){
     ofNoFill();
-    ofSetColor(0xffffff);
+
+    // ofSetColor(0xffffff);
+    ofSetHexColor(0xffffff); // 0x...の形式ならofSetHexColorを使おう
     //取り込んだ画像を(10,10)の位置に表示
     colorImg.draw(10,10);
     //グレースケールに変換した画像を(340,10)の位置に表示
