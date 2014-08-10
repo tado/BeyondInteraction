@@ -19,5 +19,5 @@ public:
     void windowResized(int w, int h);
     
     ofxBox2d box2d; //Box2Dのインスタンス
-    vector <ofxBox2dCircle> circles; //円を格納するvector
+    vector <ofPtr<ofxBox2dCircle> > circles; //円を格納するvector
 };

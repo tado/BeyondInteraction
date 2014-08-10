@@ -15,7 +15,8 @@ void testApp::setup(){
 	// フレームレートを60Hzにセット
 	ofSetFrameRate(60);
 	ofSetVerticalSync(true);
-	
+    ofHideCursor();
+    
 	// アルファブレンディング & スムーシングを有効化
 	ofEnableAlphaBlending();
 	ofEnableSmoothing();
