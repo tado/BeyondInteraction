@@ -20,8 +20,9 @@ void testApp::draw(){
     ofSetColor(0, 127, 255);
     //circlesに格納された全ての円を描画
     for(int i=0; i<circles.size(); i++) {
-        circles[i].draw();
+        circles[i].get()->draw();
     }
+    box2d.drawGround();
 }
 
 void testApp::keyPressed(int key){
@@ -39,9 +40,9 @@ void testApp::mouseDragged(int x, int y, int button){
 void testApp::mousePressed(int x, int y, int button){
     //画面をクリックすると、円を追加
     float r = ofRandom(10, 40); //半径を設定
-    ofxBox2dCircle circle; //ofxBox2dCircle(円)クラスをインスタンス化
-    circle.setPhysics(1.0, 0.8, 0.5); //物理パラメータを設定(重さ、反発力、摩擦力)
-    circle.setup(box2d.getWorld(), mouseX, mouseY, r); //マウスの位置に円を設定
+    ofPtr<ofxBox2dCircle> circle = ofPtr<ofxBox2dCircle>(new ofxBox2dCircle); //ofxBox2dCircle(円)クラスをインスタンス化
+    circle.get()->setPhysics(1.0, 0.8, 0.5); //物理パラメータを設定(重さ、反発力、摩擦力)
+    circle.get()->setup(box2d.getWorld(), mouseX, mouseY, r); //マウスの位置に円を設定
     circles.push_back(circle); //生成した円をcirclesに追加
 }
 

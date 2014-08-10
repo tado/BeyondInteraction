@@ -21,7 +21,7 @@ void testApp::update(){
 void testApp::draw(){
     //circlesに格納された全ての図形を描画
     for(int i=0; i<circles.size(); i++) {
-        circles[i].draw();
+        circles[i].get()->draw();
     }
 }
 
@@ -29,9 +29,9 @@ void testApp::keyPressed(int key){
     //「c」をタイプすると、マウスの位置に円を追加
     if (key == 'c') {
         float r = ofRandom(5, 20); //半径を設定
-        CustomCircle c; //CustomCircleクラスをインスタンス化
-        c.setPhysics(1.0, 0.8, 0.5); //物理パラメータを設定
-        c.setup(box2d.getWorld(), mouseX, mouseY, r); //マウスの位置に円を設定
+        ofPtr<CustomCircle> c = ofPtr<CustomCircle>(new CustomCircle); //CustomCircleクラスをインスタンス化
+        c.get()->setPhysics(1.0, 0.8, 0.5); //物理パラメータを設定
+        c.get()->setup(box2d.getWorld(), mouseX, mouseY, r); //マウスの位置に円を設定
         circles.push_back(c); //生成した円をcirclesに追加
     }
 }

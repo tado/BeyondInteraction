@@ -20,6 +20,6 @@ public:
     void windowResized(int w, int h);
     
     ofxBox2d box2d; //Box2Dのインスタンス
-    vector <CustomCircle> circles; //CustomCircleのインスタンスを格納するvector
-    vector <ofxBox2dRect> rects; //障害物用の長方形ofxBox2dRectを格納するvector
+    vector <ofPtr<CustomCircle> > circles; //CustomCircleのインスタンスを格納するvector
+    vector <ofPtr<ofxBox2dRect> > rects; //障害物用の長方形ofxBox2dRectを格納するvector
 };
