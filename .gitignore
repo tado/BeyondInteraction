@@ -75,3 +75,15 @@ Desktop.ini
 
 #Android
 .csettings
+*.db
+*.filters
+*.user
+*.exe
+*.exp
+*.ilk
+*.lib
+*.pdb
+*.dll
+*.opendb
+*.db-shm
+*.db-wal
