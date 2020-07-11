@@ -3,20 +3,28 @@
 //--------------------------------------------------------------
 void ofApp::setup() {
 	ofSetFrameRate(60);
+	light.setSpotlight(); //スポットライトを設置
+	light.setPosition(-400, 400, 800); //ライトの位置を設定
+	light.enable(); //ライトを有効に
 }
 
+//--------------------------------------------------------------
 void ofApp::update() {
+
 }
 
+//--------------------------------------------------------------
 void ofApp::draw() {
-	//画面の中心に原点を移動
-	ofTranslate(ofGetWidth() / 2, ofGetHeight() / 2);
-	//回転
-	ofRotateRad(ofGetElapsedTimef() * 4.0);
-	//四角形を描画
-	ofSetColor(31, 127, 255);
-	ofSetRectMode(OF_RECTMODE_CENTER);
-	ofDrawRectangle(0, 0, 400, 400);
+	camera.begin(); //カメラ開始
+	//立方体を描画
+	box.set(200); //幅、高さ、奥行を200ピクセルに
+	box.setPosition(-120, 0, 0); //位置を設定
+	box.draw(); //ワイヤーフレームで描画
+	//球を描画
+	sphere.set(100, 32); //半径100ピクセル、分割数32に
+	sphere.setPosition(120, 0, 0); //位置を設定
+	sphere.draw(); //ワイヤーフレームで描画
+	camera.end(); //カメラ終了
 }
 
 //--------------------------------------------------------------
