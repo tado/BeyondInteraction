@@ -5,7 +5,7 @@ void ofApp::setup() {
 	ofBackground(0);
 	//板の生成
 	ofPlanePrimitive plane;
-	plane.set(2500, 2500, 400, 400);
+	plane.set(2500, 2500, 200, 200);
 	//板のメッシュの抽出
 	mesh = plane.getMesh();
 	//shaderのロード
