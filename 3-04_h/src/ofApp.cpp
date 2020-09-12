@@ -73,7 +73,7 @@ void ofApp::update(){
         for (int i = 0; i < contourFinder.nBlobs; i++){
             for (int j = 0; j < contourFinder.blobs[i].pts.size(); j += 4) {
                 //輪郭線にそって等間隔に座標を抽出
-                ofPoint pos = contourFinder.blobs[i].pts[j];
+                glm::vec3 pos = contourFinder.blobs[i].pts[j];
                 //輪郭線に並べるofxBox2dCircleを追加
                 auto circle = make_shared<ofxBox2dCircle>();
                 circle->setup(box2d.getWorld(), pos.x, pos.y, 4);
