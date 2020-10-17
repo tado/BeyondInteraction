@@ -1,12 +1,8 @@
 BeyondInteraction
 =================
 
-書籍「[Beyond Interaction - メディアアートのためのopenFrameworksプログラミング入門](http://www.bnn.co.jp/books/title_index/web/beyond_interaction_openframewo.html)」のソースコード配布のためのリポジトリです。
+書籍「Beyond Interactoin」のサンプルコード配布のためのリポジトリです。それぞれの版は以下のリポジトリに対応しています。
 
-書籍のPDFデータは、Creaticve Commonsライセンス(CC-BY-NC-SA)で配布しています。
-
-* [Beyond Interaction – PDF edition（8.8 MB）](http://www.bnn.co.jp/download/beyond_interaction/BNN_BeyondInteraction.pdf)
-
-全てのプロジェクトは、openFrameworks v0073でビルドできるように作成しました。openFrameworksのフレームワーク本体は、下記からダウンロードしてください。
-
-* [openFrameworks > download](http://www.openframeworks.cc/download/)
+- Beyond Interaction ―メディアアートのためのopenFrameworksプログラミング入門 https://github.com/tado/BeyondInteraction/tree/1st
+- Beyond Interaction\[改訂第2版\] -クリエイティブ・コーディングのためのopenFrameworks実践ガイド https://github.com/tado/BeyondInteraction/tree/2nd
+- Beyond Interaction\[改訂第3版\] クリエイティブ・コーディングのためのopenFrameworks実践ガイドhttps://github.com/tado/BeyondInteraction/tree/3rd
